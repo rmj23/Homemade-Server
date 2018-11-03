@@ -1,0 +1,23 @@
+/* CSS Document */
+body {
+	background-color: lightgray;
+}
+
+h1 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li a:hover {
+	background-color:#027503;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	border-top: medium solid black;
+}
+
+footer p {
+	padding-top: 20px;
+}
