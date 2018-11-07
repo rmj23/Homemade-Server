@@ -2,7 +2,7 @@
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
 /* Set e-mail recipient */
-$To  = "jrgraphics23@gmail.com";
+$To  = "someone@gmail.com";
 
 /* Check all form inputs using check_input function */
 $Firstname = htmlspecialchars($_POST['Firstname']);
@@ -10,7 +10,7 @@ $Lastname = htmlspecialchars($_POST['Lastname']);
 $Phonenumber = htmlspecialchars($_POST['Phonenumber']);
 $Email = htmlspecialchars($_POST['Email']);
 $Comment = htmlspecialchars($_POST['Comment']);
-$Subject = "Morales Landscaping Quote Request";
+$Subject = "ABC Landscaping Quote Request";
 
 /* Message for the email */
 $Message = "Hello, <br/>
@@ -43,8 +43,8 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'rubenmoralesjr1021@gmail.com';     // SMTP username
-    $mail->Password = 'Moralestech#96';                   // SMTP password
+    $mail->Username = 'someone@gmail.com';     // SMTP username
+    $mail->Password = 'password';                   // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 	$mail->SMTPOptions = array(
@@ -56,7 +56,7 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 							   );
 
     //Recipients
-    $mail->setFrom('rubenmoralesjr1021@gmail.com', 'Morales Tech Server');
+    $mail->setFrom('someone@gmail.com', 'Server');
     $mail->addAddress($To, 'Joe User');                    // Add a recipient, Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
